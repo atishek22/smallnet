@@ -1,8 +1,7 @@
 import numpy as np
 
 from smallnet.neural_net import NeuralNet
-from smallnet.layers.linear import Linear
-from smallnet.layers.tanh import Tanh
+from smallnet.layers import Linear, Tanh
 from smallnet.train import train
 
 # training data
