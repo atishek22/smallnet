@@ -3,7 +3,7 @@ from typing import Sequence, Iterator, Tuple
 from smallnet.tensor import Tensor
 from smallnet.layers.layer import Layer
 
-class NeuralNet:
+class Sequential:
     def __init__(self, network: Sequence[Layer]) -> None:
         self.network = network
 

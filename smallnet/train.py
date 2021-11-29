@@ -6,10 +6,10 @@ from smallnet.loss.loss import Loss
 from smallnet.loss.mean_squared import MSE
 from smallnet.optimiser.optimiser import Optimiser
 from smallnet.optimiser.stochastic_gradient_descent import SGD
-from smallnet.neural_net import NeuralNet
+from smallnet.model import Sequential
 
 # later move this back to neural net
-def train(network: NeuralNet,
+def train(network: Sequential,
           inputs: Tensor,
           targets: Tensor,
           epochs: int = 4000,
