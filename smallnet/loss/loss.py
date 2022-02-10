@@ -1,7 +1,7 @@
-import numpy as np
 from abc import abstractmethod, ABC
 
 from smallnet.tensor import Tensor
+
 
 class Loss(ABC):
 

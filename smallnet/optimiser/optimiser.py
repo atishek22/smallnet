@@ -1,5 +1,8 @@
 from abc import ABC, abstractmethod
-from smallnet.model import Sequential
+from typing import Iterator, Tuple
+
+from smallnet.tensor import Tensor
+
 
 class Optimiser(ABC):
     @abstractmethod
@@ -7,6 +10,6 @@ class Optimiser(ABC):
         self.learning_rate = learning_rate
 
     @abstractmethod
-    def step(self, network: Sequential) -> None:
+    def step(self, params_and_grads: Iterator[Tuple[Tensor, Tensor]]) -> None:
         """Take a gradient descent step"""
         raise NotImplementedError

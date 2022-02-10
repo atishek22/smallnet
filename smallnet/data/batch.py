@@ -1,10 +1,14 @@
+from typing import Iterator
+
 import numpy as np
 
-from typing import Iterator
-from smallnet.tensor import Tensor
 from smallnet.data.data import Data, DataIterator
+from smallnet.tensor import Tensor
+
 
 class Batch(DataIterator):
+    """"""
+
     def __init__(self, batch_size: int = 32, shuffled: bool = True):
         self.batch_size = batch_size
         self.shuffled = shuffled

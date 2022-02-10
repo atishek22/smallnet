@@ -1,7 +1,8 @@
 import numpy as np
 
-from smallnet.tensor import Tensor
 from smallnet.loss.loss import Loss
+from smallnet.tensor import Tensor
+
 
 class MSE(Loss):
     """
@@ -9,6 +10,7 @@ class MSE(Loss):
         Simplifying some Computations
         Would later move to scipy.optimize
     """
+
     def loss(self, actual: Tensor, predicted: Tensor) -> float:
         diff = predicted - actual
         # return np.sqrt(np.sum(diff ** 2) / len(diff)) # for MSE
